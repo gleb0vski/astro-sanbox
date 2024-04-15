@@ -1,0 +1,44 @@
+---
+import Logo from "../components/Logo.astro";
+---
+
+<header>
+    <nav>
+        <Logo />
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contacts">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+
+    header {
+        border-bottom: 1px solid #f3f3f3;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    a {
+        font-weight: 500;
+    }
+
+</style>
