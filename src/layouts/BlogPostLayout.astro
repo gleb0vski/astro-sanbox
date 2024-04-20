@@ -1,0 +1,21 @@
+---
+import MainLayout from "./MainLayout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<MainLayout title={frontmatter.title}>
+    <section>
+        <img src={frontmatter.image.src} alt={frontmatter.image.alt}>
+        
+        <h1>{frontmatter.title}</h1>
+        <p>{frontmatter.date}</p>
+        <img src="" alt="">
+
+        <div class="post-content">
+            <div class="content">
+                <slot />
+            </div>
+        </div>
+    </section>
+</MainLayout>

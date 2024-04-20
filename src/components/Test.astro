@@ -1,0 +1,85 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+
+    <div class="content3">
+
+            <div class="div1"><h1>Веб — разработчик</h1><div class="circle"><video src="/img/1.mp4" autoplay loop muted></video></div>  </div>
+            <div class="div2"> <h1 class="lines"> // </h1></div>
+            <div class="div3"><h1>Креативный дизайнер</h1> </div>
+            <div class="div4"><p>Веб-разработчик создаёт и поддерживает веб-сайты и веб-приложения, обеспечивая их корректное отображение в различных браузерах и функционирование всех элементов интерфейса.</p>  </div>
+
+    </div>
+
+
+<style>
+    .content3 {
+        display: grid;
+        grid-template-columns: repeat(10%, 90%);
+		grid-template-rows: repeat(3, auto);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .div1 { grid-area: 1 / 1 / 2 / 3; display: flex; gap: 4rem;}
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+    .div3 { grid-area: 2 / 2 / 3 / 3; }
+    .div4 { grid-area: 3 / 2 / 4 / 3; }
+
+
+    h1 {
+		font-size: 8rem;
+		font-size: clamp(4rem, 8vw, 8rem); 
+
+		letter-spacing: -8px;
+		font-weight: 600;
+		line-height: 110%;
+		color: #111D13;
+	}
+
+	p {
+		width: 70ch;
+		font-size: 18px;
+		padding-top: 4rem;
+		margin-left: 12px;
+		line-height: 170%;
+		color: #415D43;
+		font-weight: 400;
+	}
+
+    img {
+		width: 100%;
+		display: block;
+	}
+
+	.img-container {
+		overflow: hidden;
+		border-radius: 14px;
+		margin: 6rem 0;
+		height: 450px;
+	}
+
+
+	.circle {
+		width: clamp(100px, 15vw, 200px);
+		height: clamp(100px, 15vw, 200px);
+		background: url('/img/ava.png'); 
+		background-position: center;
+		background-size: contain;
+		border-radius: 50%;
+		margin-top: -60px;
+		overflow: hidden;
+	}
+
+	video {
+		display: block;
+		width: 180%;
+		margin-left: -90px;
+	}
+
+	.lines {
+		color: #8FB996 !important;
+	}
+
+</style>

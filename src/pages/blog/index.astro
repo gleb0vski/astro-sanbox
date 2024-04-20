@@ -1,8 +1,32 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro"
+import PostCard from "../../components/PostCard.astro"
+
+const allPosts = await Astro.glob("./*.md")
 ---
 
+
 <MainLayout title="Blog" description="Blog page">
-    <p>Blog</p>
+
+    <div class="blogGrid">
+
+        {
+            allPosts.map((post) => <div><PostCard {post} /></div>)
+        }
+        
+
+    </div>
+
+
 </MainLayout>
+
+<style>
+
+    .blogGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+     
+</style>
 

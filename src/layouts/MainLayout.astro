@@ -12,14 +12,10 @@ const {title, description} = Astro.props;
     <MainHead title={title} description={description} />
 	<body>
         <Header />
-        <slot />
+        <main>
+            <slot />
+        </main>
         <Footer />
 	</body>
 </html>
 
-
-<style>
-    body {
-        height: 100dvh;
-    }
-</style>

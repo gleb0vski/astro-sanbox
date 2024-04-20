@@ -1,0 +1,17 @@
+---
+const { post } = Astro.props;
+---
+
+<a href={post.url}>LINK</a>
+
+<img src={post.frontmatter.image.src} alt={post.frontmatter.image.alt}>
+<p>{post.frontmatter.title}</p>
+
+
+<style>
+    img {
+        display: block;
+        width: 100%;
+        border-radius: .5rem;
+    }
+</style>
